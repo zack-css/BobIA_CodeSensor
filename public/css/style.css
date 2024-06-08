@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 30pt;
+
+}
+
+body {
+    
+    background-color: #EDE3DA;
+    margin: 0;
+    padding: 0;
+
+    background-image: url('../assets/img/CodeSensorTransparentePreto.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+h1 {
+    color: #880000;
+    text-align: center;
+}
+
+textarea[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+select,
+button {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #880000;
+    color: #FFFFFF;
+
+    border: 2px solid transparent;
+    width: 10vw;
+    height: 5vh;
+
+    font-size: 0.45em;
+    transition: all 0.25s ease-in-out 0ms;
+}
+
+button:hover {
+    background-color: transparent;
+    color: #880000;
+    border: 2px solid #880000;
+}
+
+#resposta {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #D0D3D4;
+    border: 1px solid #63666A;
+    text-align: left;
+    display: none;
+    font-size: 0.5em;
+}
