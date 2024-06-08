@@ -19,27 +19,31 @@ app.use((req, res, next) => {
 
 app.post("/perguntar", async (req, res) => {
     const pergunta = req.body.pergunta;
+    console.log("Recebida a pergunta: ", pergunta);
 
     try {
         const resultado = await gerarResposta(pergunta);
         res.json({ resultado });
     } catch (error) {
+        console.error("Erro ao gerar resposta:", error);
         res.status(500).json({ error: 'Erro interno do servidor' });
     }
 });
 
 async function gerarResposta(mensagem) {
-    const modeloIA = chatIA.getGenerativeModel({ model: "gemini-pro" });
-
     try {
+        const modeloIA = chatIA.getGenerativeModel({ model: "gemini-pro" });
+        console.log("Modelo de IA obtido:", modeloIA);
+
         const resultado = await modeloIA.generateContent(`Em um parágrafo responda: ${mensagem}`);
+        console.log("Resultado da geração de conteúdo:", resultado);
+
         const resposta = await resultado.response.text();
-        
-        console.log(resposta);
+        console.log("Resposta gerada:", resposta);
 
         return resposta;
     } catch (error) {
-        console.error(error);
+        console.error("Erro ao chamar a API de IA:", error);
         throw error;
     }
 }
